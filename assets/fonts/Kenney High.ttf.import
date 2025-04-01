@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://4grpd1nygac7"
-path="res://.godot/imported/Kenney High.ttf-4481cdffbbd38d5b07804d3991ef9bfb.fontdata"
+path="res://.godot/imported/Kenney High.ttf-1764edeabd9c0d60710b9afaacb37b3a.fontdata"
 
 [deps]
 
-source_file="res://assets/fonts/Fonts/Kenney High.ttf"
-dest_files=["res://.godot/imported/Kenney High.ttf-4481cdffbbd38d5b07804d3991ef9bfb.fontdata"]
+source_file="res://assets/fonts/Kenney High.ttf"
+dest_files=["res://.godot/imported/Kenney High.ttf-1764edeabd9c0d60710b9afaacb37b3a.fontdata"]
 
 [params]
 
