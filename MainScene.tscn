@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://06pso8u1hvne"]
+
+[ext_resource type="Texture2D" uid="uid://dnsgabrs1ebkc" path="res://assets/TowerDefense/kenney_tower-defense-top-down/Sample.png" id="1_3ees1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="Sample" type="Sprite2D" parent="."]
+texture = ExtResource("1_3ees1")
+centered = false
+
+[node name="Sample2" type="Sprite2D" parent="."]
+texture = ExtResource("1_3ees1")
+centered = false
