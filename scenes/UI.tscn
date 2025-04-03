@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://c6wodkyu8bxbl"]
+[gd_scene load_steps=11 format=3 uid="uid://c6wodkyu8bxbl"]
 
 [ext_resource type="Texture2D" uid="uid://dnsgabrs1ebkc" path="res://assets/TowerDefense/kenney_tower-defense-top-down/Sample.png" id="1_adsy7"]
+[ext_resource type="Script" path="res://scenes/ui.gd" id="1_jlam0"]
 [ext_resource type="FontFile" uid="uid://c7c5f1pvfjvh7" path="res://assets/fonts/Kenney Future.ttf" id="2_ecaib"]
-[ext_resource type="Script" path="res://mainMenuRedirect.gd" id="3_54qit"]
+[ext_resource type="Script" path="res://scripts/mainMenuRedirect.gd" id="3_of2w3"]
+[ext_resource type="AudioStream" uid="uid://46kt16p6jbkt" path="res://assets/UI/Sounds/click-b.ogg" id="4_ycqih"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k00ic"]
 bg_color = Color(0.498039, 0.32549, 0.984314, 1)
@@ -46,6 +48,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_jlam0")
 
 [node name="placeHolderBackground" type="Sprite2D" parent="."]
 position = Vector2(-29, 0)
@@ -83,11 +86,13 @@ offset_bottom = 304.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
-script = ExtResource("3_54qit")
+script = ExtResource("3_of2w3")
 
 [node name="start" type="Button" parent="buttonHolder"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../exit")
+focus_neighbor_bottom = NodePath("../settings")
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -104,6 +109,8 @@ text = "Start game"
 [node name="settings" type="Button" parent="buttonHolder"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../start")
+focus_neighbor_bottom = NodePath("../exit")
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -121,6 +128,8 @@ text = "Settings"
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_top = NodePath("../settings")
+focus_neighbor_bottom = NodePath("../start")
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -133,6 +142,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_w6yow")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvms")
 theme_override_styles/normal = SubResource("StyleBoxFlat_mk4vq")
 text = "Exit game"
+
+[node name="click" type="AudioStreamPlayer2D" parent="buttonHolder"]
+position = Vector2(-273, -215)
+stream = ExtResource("4_ycqih")
+pitch_scale = 3.0
 
 [connection signal="pressed" from="buttonHolder/start" to="buttonHolder" method="_on_start_pressed"]
 [connection signal="pressed" from="buttonHolder/settings" to="buttonHolder" method="_on_settings_pressed"]
