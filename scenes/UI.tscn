@@ -148,6 +148,12 @@ position = Vector2(-273, -215)
 stream = ExtResource("4_ycqih")
 pitch_scale = 3.0
 
+[connection signal="focus_entered" from="buttonHolder/start" to="buttonHolder" method="_on_start_focus_entered"]
+[connection signal="focus_exited" from="buttonHolder/start" to="buttonHolder" method="_on_start_focus_exited"]
 [connection signal="pressed" from="buttonHolder/start" to="buttonHolder" method="_on_start_pressed"]
+[connection signal="focus_entered" from="buttonHolder/settings" to="buttonHolder" method="_on_settings_focus_entered"]
+[connection signal="focus_exited" from="buttonHolder/settings" to="buttonHolder" method="_on_settings_focus_exited"]
 [connection signal="pressed" from="buttonHolder/settings" to="buttonHolder" method="_on_settings_pressed"]
+[connection signal="focus_entered" from="buttonHolder/exit" to="buttonHolder" method="_on_exit_focus_entered"]
+[connection signal="focus_exited" from="buttonHolder/exit" to="buttonHolder" method="_on_exit_focus_exited"]
 [connection signal="pressed" from="buttonHolder/exit" to="buttonHolder" method="_on_exit_pressed"]
