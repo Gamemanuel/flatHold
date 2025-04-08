@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c6wodkyu8bxbl"]
+[gd_scene load_steps=13 format=3 uid="uid://c6wodkyu8bxbl"]
 
 [ext_resource type="Texture2D" uid="uid://dnsgabrs1ebkc" path="res://assets/TowerDefense/kenney_tower-defense-top-down/Sample.png" id="1_adsy7"]
 [ext_resource type="Script" path="res://scenes/ui.gd" id="1_jlam0"]
@@ -6,12 +6,20 @@
 [ext_resource type="Script" path="res://scripts/mainMenuRedirect.gd" id="3_of2w3"]
 [ext_resource type="AudioStream" uid="uid://46kt16p6jbkt" path="res://assets/UI/Sounds/click-b.ogg" id="4_ycqih"]
 
+[sub_resource type="Theme" id="Theme_uc5ij"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k00ic"]
 bg_color = Color(0.498039, 0.32549, 0.984314, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pt5wp"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vayl2"]
 bg_color = Color(0.496685, 0.325607, 0.985387, 1)
@@ -49,6 +57,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jlam0")
+
+[node name="keyboardAccept" type="Window" parent="."]
+title = "Choose Controll layout"
+initial_position = 5
+size = Vector2i(400, 400)
+unresizable = true
+borderless = true
+theme = SubResource("Theme_uc5ij")
+theme_override_fonts/title_font = ExtResource("2_ecaib")
 
 [node name="placeHolderBackground" type="Sprite2D" parent="."]
 position = Vector2(-29, 0)
@@ -93,6 +110,7 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../exit")
 focus_neighbor_bottom = NodePath("../settings")
+theme_override_colors/font_disabled_color = Color(0.000693898, 0.000693898, 0.000693898, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -100,6 +118,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ecaib")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxFlat_k00ic")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pt5wp")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vayl2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w6yow")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvms")
@@ -111,6 +130,7 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../start")
 focus_neighbor_bottom = NodePath("../exit")
+theme_override_colors/font_disabled_color = Color(0.000693898, 0.000693898, 0.000693898, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -118,6 +138,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ecaib")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxFlat_k00ic")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pt5wp")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vayl2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w6yow")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvms")
@@ -130,6 +151,7 @@ layout_mode = 2
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../settings")
 focus_neighbor_bottom = NodePath("../start")
+theme_override_colors/font_disabled_color = Color(0.000693898, 0.000693898, 0.000693898, 1)
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -137,6 +159,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_ecaib")
 theme_override_font_sizes/font_size = 60
 theme_override_styles/focus = SubResource("StyleBoxFlat_k00ic")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_pt5wp")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vayl2")
 theme_override_styles/hover = SubResource("StyleBoxFlat_w6yow")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvms")

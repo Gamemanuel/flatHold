@@ -4,6 +4,7 @@ var start
 var settings
 var exit
 var click_is_playing
+@onready var keyboardAccept = $Main/keyboardAccept
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -11,6 +12,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	
 	if keyboardMode != 1:
 		if Input.is_action_pressed("d-pad-up") or Input.is_action_pressed("d-pad-down") == true:
 			$start.grab_focus()
