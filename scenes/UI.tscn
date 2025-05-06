@@ -92,7 +92,7 @@ script = ExtResource("3_of2w3")
 layout_mode = 2
 size_flags_vertical = 3
 focus_neighbor_top = NodePath("../exit")
-focus_neighbor_bottom = NodePath("../settings")
+focus_neighbor_bottom = NodePath("../exit")
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
@@ -106,29 +106,11 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvms")
 theme_override_styles/normal = SubResource("StyleBoxFlat_mk4vq")
 text = "Start game"
 
-[node name="settings" type="Button" parent="buttonHolder"]
-layout_mode = 2
-size_flags_vertical = 3
-focus_neighbor_top = NodePath("../start")
-focus_neighbor_bottom = NodePath("../exit")
-theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
-theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_ecaib")
-theme_override_font_sizes/font_size = 60
-theme_override_styles/focus = SubResource("StyleBoxFlat_k00ic")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_vayl2")
-theme_override_styles/hover = SubResource("StyleBoxFlat_w6yow")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_1mvms")
-theme_override_styles/normal = SubResource("StyleBoxFlat_mk4vq")
-text = "Settings"
-
 [node name="exit" type="Button" parent="buttonHolder"]
 texture_filter = 1
 layout_mode = 2
 size_flags_vertical = 3
-focus_neighbor_top = NodePath("../settings")
+focus_neighbor_top = NodePath("../start")
 focus_neighbor_bottom = NodePath("../start")
 theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
@@ -149,5 +131,4 @@ stream = ExtResource("4_ycqih")
 pitch_scale = 3.0
 
 [connection signal="pressed" from="buttonHolder/start" to="buttonHolder" method="_on_start_pressed"]
-[connection signal="pressed" from="buttonHolder/settings" to="buttonHolder" method="_on_settings_pressed"]
 [connection signal="pressed" from="buttonHolder/exit" to="buttonHolder" method="_on_exit_pressed"]

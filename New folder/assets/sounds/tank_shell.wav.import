@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpkewwd6hde3p"
+path="res://.godot/imported/tank_shell.wav-5de35d75cb881c0796d607497268e53d.sample"
+
+[deps]
+
+source_file="res://New folder/assets/sounds/tank_shell.wav"
+dest_files=["res://.godot/imported/tank_shell.wav-5de35d75cb881c0796d607497268e53d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
